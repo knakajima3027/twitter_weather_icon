@@ -8,11 +8,12 @@ AT = config.ACCESS_TOKEN
 ATS = config.ACCESS_TOKEN_SECRET
 twitter = OAuth1Session(CK, CS, AT, ATS)
 
-weather_icon = get_icon() #天気の取得&天気アイコンの取得
-
 """プロフィール, 名前の変更"""
 url = 'https://api.twitter.com/1.1/account/update_profile.json'
 method = 'POST'
 
-params = {'name':'your twitter name' + weather_icon}
-res = twitter.post(url, params = params)
+
+def handler(event, context):
+    weather_icon = get_icon() #天気の取得&天気アイコンの取得
+    params = {'name':'your twitter name' + weather_icon}
+    res = twitter.post(url, params = params)
