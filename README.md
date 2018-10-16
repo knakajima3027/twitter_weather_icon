@@ -5,4 +5,5 @@ https://developer.twitter.com
 https://home.openweathermap.org/users/sign_up  
 取得した値を`GET_Weather.py`のkeyに入力
 ## 3. AWSのLumbdaに投げる  
-https://aws.amazon.com/jp/lambda/
+https://aws.amazon.com/jp/lambda/  
+このリポジトリをzipに圧縮して，Lumbdaのコードエントリーへ投げる
